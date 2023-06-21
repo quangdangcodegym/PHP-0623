@@ -6,34 +6,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        /* table, td, th{
+        table, td, th{
             border: 1px solid black;
             border-collapse: collapse;
-        } */
-
+        }
+        .tbHead{
+            text-align: left;
+        }
+        .priceTb{
+            text-align: right;
+            color: rgb(255, 0, 0);
+        }
+        .rowTb{
+            background-color: blanchedalmond;
+        }
     </style>
 </head>
 <body>
-    <table style="width:100%">
+    <table style="width:50%">
         <tr>
-          <th>Firstname</th>
-          <th>Lastname</th> 
-          <th>Age</th>
+          <th class="tbHead">Firstname</th>
+          <th class="tbHead">Lastname</th> 
+          <th class="tbHead">Age</th>
         </tr>
-        <tr>
+        <tr class="rowTb">
           <td>Jill</td>
           <td>Smith</td>
-          <td>50</td>
+          <td class="priceTb">50</td>
         </tr>
         <tr>
           <td>Eve</td>
           <td>Jackson</td>
-          <td>94</td>
+          <td class="priceTb">94</td>
         </tr>
-        <tr>
+        <tr class="rowTb">
           <td>John</td>
           <td>Doe</td>
-          <td>80</td>
+          <td class="priceTb">80</td>
         </tr>
       </table>
 </body>
