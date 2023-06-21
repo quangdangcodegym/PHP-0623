@@ -5,6 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hello CodeGym Huê</title>
+    <style>
+        .bordertable{
+            border: 1px solid blue;
+            color: blue;
+        }
+        #lastCell{
+            color: yellow;
+        }
+        .headtable{
+            color: chartreuse;
+            text-decoration: underline;
+            border: 1px solid blue;
+        }
+    </style>
 </head>
 <body>
     <!--list-style-type: square, circle, none -->
@@ -15,10 +29,37 @@
 
     <!-- type: "I, i, A"-->
     <ol type="i">
-        <li>Huda</li>
+        <li><a href="https://www.carlsbergvietnam.vn/en/products/huda/huda/">Huda</a></li>
         <li>Tiger</li>
-        <li>Huda</li>
+        <li>Huda
+            <ul>
+                <li>Huda trâu</li>
+                <li>Huda lon</li>
+            </ul>
+        </li>
         <li>Tiger</li>
     </ol>
+
+    <table class="bordertable" style="border-collapse: collapse;">
+        <thead>
+            <tr>
+                <th class="headtable">Thứ 2</th>
+                <th class="headtable">Thứ 3</th>
+                <th class="headtable">Thứ 4</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="bordertable">Sinh</td>
+                <td class="bordertable">Hóa 1</td>
+                <td class="bordertable">Toán 2</td>
+            </tr>
+            <tr >
+                <td class="bordertable">Sử</td>
+                <td class="bordertable">Văn 1</td>
+                <td class="bordertable" id = "lastCell" style="color: red;">Toán 2</td>
+            </tr>
+        </tbody>
+    </table>
 </body>
 </html>
