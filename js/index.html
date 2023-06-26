@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
 
     <h1 id="h1hello">Hello các bạn</h1>
     <h1>Xin chào các bạn</h1>
 
     <h3>Xin chào xin chào Ny</h3>
-    <img id="imgNy" style="" src="ny.png" alt="hinh co ny"/>
+    <img id="imgNy" style="" src="ny.png" alt="hinh co ny" />
 
     <div id="div-search">
         <input type="text" placeholder="search....">
@@ -78,20 +80,85 @@
         }
 
         console.log(sum);
-        **/
 
-        var point = +prompt("Mời nhập điểm");
+
+        // IF ELSE
+        var point = +prompt("Mời nhập điểm");       //12
 
         if(point > 8 && point <=10){
             window.alert("Giỏi")
         }
+        if(point > 7 && point <=8){
+            window.alert("Khá")
+        }
+        if(point > 5 && point <=7){
+            window.alert("Khá")
+        }
+        if(point <=5 && point > 0){
+            window.alert("Khá")
+        }
+        if(point > 10 || point <0){
+            window.alert("Điểm không hợp lệ")
+        }
+
+        IF ELSE 2
+        var point = +prompt("Mời nhập điểm");       //12
+
+        if(point < 0 || point > 10){
+            window.alert("Điểm không hợp lệ")
+        }else{
+            if(point > 7 && point <=10){
+                window.alert("Giỏi")
+            }else{
+                if(point > 5 && point <=7){
+                    window.alert("Khá")
+                }else{
+                    window.alert("Yếu")
+                }
+            }
+        }
+        
+
+        IF ELSE lồng nhau
+        var point = +prompt("Mời nhập điểm");       //12
+        if(point < 0 || point > 10){
+            window.alert("Điểm không hợp lệ")
+        }else if(point > 7 && point <=10){
+            window.alert("Giỏi");
+        }else if(point > 5 && point <=7){
+            window.alert("Khá");
+        }else{
+            window.alert("Yếu")
+        }
+
+
+        SWITCH CASE
+        var day = prompt("Nhập vào 1 thứ: ");       //ấvvava
+        switch (day) {
+            case "2":
+                console.log("Là thứ 2");
+                break;
+            case "3":
+                console.log("Là thứ 3");
+                break;
+            case "cn":
+                console.log("Là Chủ nhật");
+                break;
+            default:
+                console.log("Ngày không hợp lệ");
+        }
+        **/
+
+        // Nhập tháng: 1,3,5,7,9,11,12 là có 31 ngày
+        // Nhập tháng: 2: 28 ngày
+        // Nhập tháng: 4,6,8,10 30 ngày
+        // Tháng khác mấy tháng trên : sai không hợp lệ
+
         
 
 
 
-
-        
-        
     </script>
 </body>
+
 </html>
