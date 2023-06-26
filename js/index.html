@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1 id="h1hello">Hello các bạn</h1>
+    <h1>Xin chào các bạn</h1>
+
+    <h3>Xin chào xin chào Ny</h3>
+    <img id="imgNy" style="" src="ny.png" alt="hinh co ny"/>
+
+    <div id="div-search">
+        <input type="text" placeholder="search....">
+    </div>
+
+    <script>
+        /**
+         -- document là cái gì
+         -- getElementById là làm cái gì
+        document.getElementById("h1hello").style.color = "red";
+        document.getElementById("h1hello").style.textDecoration = "underline";
+        document.getElementById("imgNy").src = "nyco.jpg"
+
+        -- Phân biệt: innerHtml vs innerText
+        document.getElementById("div-search").innerHTML = "<h1>Tao mới thay bằng thẻ khác</h1>"
+
+        -- document.write nó làm gì: 
+        document.write("<vvsdvfdvdsdsd>")       // nếu đưa vào không phải thẻ thì ko hiển thị
+        document.write("<h1>Xin chào cô Ny </h1")       // đưa vào phải là 1 thẻ
+
+        -- hiển thị cảnh báo
+        window.alert("Xin chào Ny Hồ")
+
+        -- console.log là làm gì
+        console.log("Xin chào Cô Tê")
+
+
+        var a = 5;                  //số nguyên: integer:  number => JS number
+        a = 100000;
+        var name = "Diễm Xưa";          // chuổi: string => JS String
+        name = "Diễm Nay"
+        var c = 5.6;            // số thực - float: number => JS number
+        var gender = true;      // đúng sai - boolean => JS boolean
+
+        var character = 'c';    // kí tự - char=> JS string
+
+        var d = false;
+        console.log(typeof d);
+
+
+        IFELSE
+        var a = 5;
+        var b = 10;
+        if(a > b){
+            console.log("A lớn hơn B");
+        }else{
+            console.log("A bé hơn B");
+        }
+
+        // a > 0: trả về true/false
+        var sum;
+        if(a > 0){
+            sum = a + b;
+        }else{
+            sum = b;
+        }
+
+       
+        // a%2: chia lấy dư
+        if(a%2 == 0){
+            sum = a + b;
+        }else{
+            sum = b;
+        }
+
+        console.log(sum);
+        **/
+
+        var point = +prompt("Mời nhập điểm");
+
+        if(point > 8 && point <=10){
+            window.alert("Giỏi")
+        }
+        
+
+
+
+
+        
+        
+    </script>
+</body>
+</html>
