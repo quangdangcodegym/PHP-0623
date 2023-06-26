@@ -147,12 +147,140 @@
             default:
                 console.log("Ngày không hợp lệ");
         }
-        **/
+
 
         // Nhập tháng: 1,3,5,7,9,11,12 là có 31 ngày
         // Nhập tháng: 2: 28 ngày
         // Nhập tháng: 4,6,8,10 30 ngày
         // Tháng khác mấy tháng trên : sai không hợp lệ
+
+        var thang = prompt("nhập tháng vào ô này");         // abc
+        switch (thang) {
+            case "1":
+            case "3":
+            case "5":
+            case "7":
+            case "9":
+            case "11":
+            case "12":
+                window.alert("thang có 31 ngày")
+                break;
+            case "4":
+            case "6":
+            case "8":
+            case "10":
+                window.alert("thang có 30 ngày")
+                break;
+            case "2":
+                window.alert("thang có 28 ngày")
+                break;
+            default:
+                window.alert("không hợp lệ");
+        }
+
+        // == : so sánh giá trị
+        // !=:  so sánh khác giá trị
+        // === : so sánh giá trị và kiểu dữ liệu
+        // !== :  so sánh khác giá trị và khác kiểu dữ liệu
+
+        var a  = 5;
+        var b = "5";
+        if(a !== b){
+            console.log("a !== b");
+        }
+
+        // Toán tử +=, -=, *=, /=
+        var a = 5;
+        // a = a + 5;
+        a +=5;
+        a *= 5;             // a = a*5;
+
+
+        // Toán tử a++ và ++a
+        var b = 5;
+        b = b+1;        // b+=1;
+        b++;            // b = b+1;
+        ++b;            // b = b+1;
+
+
+         var a = 5;
+        var b = a++*2 + ++a*3;
+        console.log(a);     // a = 7
+        console.log(b);     // b = 31
+
+
+        // Vòng lặp for nguyên thủy
+        for(var i = 0;i<100;i++){
+            console.log("Hello" + i);
+        }
+
+
+        // biến thể 1
+        var i = 0;
+        for(;i<100;i++){
+            console.log("Hello" + i);
+        }
+
+        // biến thể 2
+        var i = 0;
+        for(;;i++){
+            if(i<10){
+                console.log("Hello" + i);
+            }
+        }
+
+        // biến thể 3
+        var i = 0;
+        for(;;){
+            if(i<10){
+                console.log("Hello" + i);
+            }
+            i++;
+        }
+
+        // in ra các số chẵn từ 0 - 20;
+        for(var i = 0; i<=20;i++){
+            if(i %2 == 0 && i != 0){
+                console.log(i);
+            }
+        }
+        **/
+        // BÀi tập:
+        // In ra các số từ 100 về 0
+        // In ra 5 số chia hết cho 7 đầu tiên
+        // Tính trung bình cộng các số chia hết cho 7 từ 0-100
+
+        var sum = 0;
+        for(var i=0;i<=10;i++){
+            if(i%2 == 0){
+                  sum = sum + i;  
+            }
+        }
+
+
+
+
+
+        
+        
+
+        
+
+        
+
+        
+
+       
+
+        
+
+
+
+        
+
+        
+
+        
 
         
 
