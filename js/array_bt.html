@@ -41,7 +41,7 @@
         Thay thế các phần tử âm có trong mảng bằng giá trị 0
         Xóa các phần tử âm có trong mảng
         Sắp xếp mảng đã nhập theo thứ tự tăng dần
-        **/
+
 
         var arr = [5,1,8,9,4,7];
         var count = 0;
@@ -54,8 +54,141 @@
         }
         console.log("Tổng là: " + sum/count);
 
+        // Tìm số lớn nhất trong mảng vừa nhập
+        var arr = [-7,-1,-5,-3];
+        function findMax(arr){
+            var max = arr[0];
+            for(var i = 1;i<arr.length;i++){
+                if(arr[i]>max){
+                    max = arr[i];
+                }
+            }
+            return max;
+        }
+
+        //Tìm vị trí các số nhỏ nhất trong mảng
+        var arr = [1,8,1,6,9];
+
+        function findIndexsMin(numbers){
+            var min = numbers[0];
+            for(var i = 1;i<numbers.length;i++){
+                if(numbers[i] < min){
+                    min = numbers[i];
+                }
+            }
+            var results = [];
+            for(var i = 0;i<numbers.length;i++){
+                if(numbers[i] == min){
+                    results.push(i);
+                }
+            }
+            return results;
+        }
+        
+        console.log(findIndexsMin(arr));
+
+        //Đếm các số chính phương có trong mảng
+        var arr = [9,4,7,1,6];
+
+        function checkSquareNumber(number){
+            if(number==1)
+                return true;
+            for(var i=1;i<number;i++){
+                if(i*i == number){
+                    return true;
+                }else if(i*i > number){
+                    return false;
+                }
+            }
+            return false;
+        }
+
+        var count = 0;
+        function countSquareNumber(numbers){
+            for(var i=0;i<arr.length;i++){
+                if(checkSquareNumber(numbers[i])){
+                    count++;
+                }
+            }
+        }
+
+        console.log(countSquareNumber(arr));
+
+        let b = [4,16,49];
+        countSquareNumber(b);
+
+        console.log(count);
+
+        function sum(a, b){
+            return a+b;
+        }
+
+        var funcSum = function(a, b){           // HÀM ANONYMOUS: ẨN DANH - KO TÊN
+            return a+b;
+        }
         
 
+        var funcSum1 = (a,b)=>{                 // hàm mũi tên:
+            return a+b;
+        }
+        var funcSum2 = (a,b) => a+b;
+
+        console.log(funcSum2(50,6));
+
+        var number = 7;
+        var funcMult = function(number){
+            return number * number;
+        }
+        var funcMult1 = (a) => {
+            return number* number;
+        }
+        var funcMult2 = a => {
+            return number* number;
+        }
+
+        console.log(funcMult2(number));
+
+        var funcHello = function(){
+            console.log("Hello");
+        }
+        var funcHello1 = ()=>{
+            console.log("Hello");
+        }
+var arr = [6,1,7,8];
+        arr.map(function(number, i){
+            console.log(number*i);
+        })
+
+        arr.map((value, index, arr)=>{
+            console.log(value*2);
+        })
+        **/
+
+        
+
+        var arr = [6,1,7,8];
+        function findIndex(arr, value){
+            for(var i=0;i<arr.length;i++){
+                if(arr[i] == value){
+                    return i;
+                }
+            }
+            return -1;
+        }
+
+        // console.log(findIndex(arr, 7));
+
+        var value = -6;
+        var vitri = arr.findIndex((number)=>{
+            // return number == value;
+            if(number == value){
+                return true;
+            }else{
+                return false;
+            }
+        })
+        console.log(vitri);
+        
     </script>
 </body>
 
