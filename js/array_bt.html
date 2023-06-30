@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /**
+        // biến toàn cục
+        var arr = [4, 1, 8, 9];
+        function daonguocMang(arr1) {
+
+            var anew = [];
+            for (var i = arr1.length - 1; i >= 0; i--) {
+                anew.push(arr1[i]);
+            }
+            // anew: 9,8,1,4
+            arr = anew; [9,8,1,4]
+            return arr;
+        }
+        console.log(daonguocMang(arr));
+
+        var number = 10;
+        function multiple(a){
+            a = a *2;
+            number = a;
+        }
+
+        multiple(10);
+        console.log(number);
+
+        Tính trung bình cộng các số lẻ ở vị trí chẵn
+        Tìm số lớn nhất trong mảng vừa nhập
+        Tìm vị trí các số nhỏ nhất trong mảng
+        Đếm các số chính phương có trong mảng
+        Hiện thị các số nguyên tố có trong mảng lên màn hình
+        Thay thế các phần tử âm có trong mảng bằng giá trị 0
+        Xóa các phần tử âm có trong mảng
+        Sắp xếp mảng đã nhập theo thứ tự tăng dần
+        **/
+
+        var arr = [5,1,8,9,4,7];
+        var count = 0;
+        var sum = 0;
+        for(var i = 0;i<arr.length;i++){
+            if(i%2 == 0 && arr[i] %2 ==1){
+                sum += arr[i];
+                count++;
+            }
+        }
+        console.log("Tổng là: " + sum/count);
+
+        
+
+    </script>
+</body>
+
+</html>
