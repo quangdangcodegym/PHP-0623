@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .col-6{
+            width: 33.33%;
+        }
+        .d-flex{
+            display: flex;
+        }
+        .justity-content-space-between{
+            justify-content: space-between;
+        }
+        .justity-content-center{
+            justify-content: center;
+        }
+        .mt-5{
+            margin-top: 50px;
+        }
+        .mt-1{
+            margin-top: 10px;
+        }
+        .mb-1{
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container d-flex justity-content-center">
+            <div class="form-currency col-6 mt-5">
+                <h4 class="mb-1">Currency convert</h4>
+                <div class="d-flex justity-content-space-between mb-1">
+                    <select name="s-currency-from">
+                        <option value="usa">USA</option>
+                        <option value="vnd">VND</option>
+                    </select>
+                    <select name="s-currency-to">
+                        <option value="vnd">VND</option>
+                        <option value="usa">USA</option>
+                    </select>
+                </div>
+                <div class="d-flex justity-content-center mb-1">
+                    <input type="text" placeholder="Enter number" name="txtNumber" >
+                    <button type="submit">Convert</button>
+                </div>
+                <div class="d-flex justity-content-center mb-1">
+                    <label for="">Result:</label>
+                </div>
+            </div>
+    </div>
+</body>
+</html>

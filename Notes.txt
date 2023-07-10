@@ -34,4 +34,32 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 $key_child = "Quang Dang";
 echo "<script>console.log('$key_child')</script>";
 
+$filteredCustomers[] = $customer;       // thêm 1 phần tử cuối mảng
 
+### hàm empty();
+Nếu biến là một chuỗi và không có ký tự nào, nghĩa là chuỗi rỗng ("").
+Nếu biến là một số và có giá trị là 0 (0) hoặc 0.0.
+Nếu biến là một mảng và không có phần tử nào.
+Nếu biến là một danh sách (array) và không có cặp khóa-giá trị nào.
+Nếu biến là một đối tượng và không có thuộc tính nào.
+Nếu biến chưa được khởi tạo.
+==> sài: 
+
+
+### toán tử ??
+$_REQUEST["from"] ?? null;
+
+
+
+### Viết mã PHP lồng HTML
+<?php foreach ($filteredCustomers as $index => $customer): ?>
+        <tr>
+            <td><?php echo $index + 1; ?></td>
+            <td><?php echo $customer['name']; ?></td>
+            <td><?php echo $customer['day_of_birth']; ?></td>
+            <td><?php echo $customer['address']; ?></td>
+            <td>
+                <div class="profile"><img src="<?php echo $customer['profile']; ?>"/></div>
+            </td>
+        </tr>
+<?php endforeach; ?>
