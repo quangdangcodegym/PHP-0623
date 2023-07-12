@@ -49,6 +49,8 @@
                 if(isset($_POST['txtNumber'])){
                     $number = $_POST['txtNumber'];
                 }
+
+                var_dump($number);
                 if($currencyFrom == "usa" && $currencyTo == "vnd"){
                     $result = $number*23000;
                 }

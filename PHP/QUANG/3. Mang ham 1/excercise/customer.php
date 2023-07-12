@@ -53,6 +53,7 @@
     </style>
 </head>
 <body>
+    <?php include('app.php') ?>
     <div class="container">
         <div class="head-form col-9">
             <form>
@@ -68,6 +69,11 @@
                     <label class="col-3"  for="">Address</label>
                     <input class="col-9 form-control" type="text" placeholder="Enter your address" />
                 </div>
+                <div class="row mb">
+                    <label class="col-3"  for=""></label>
+                    <button>Create</button>
+                    <button type="reset">Cancel</button>
+                </div>
             </form>
         </div>
         <div class="content col-9">
@@ -78,24 +84,15 @@
                     <th>Age</th>
                     <th>Address</th>
                 </tr>
-                <tr>
-                    <td>1</td>
-                    <td>Quang Dang</td>
-                    <td>12</td>
-                    <td>28 NTP</td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>Quang Dang</td>
-                    <td>12</td>
-                    <td>28 NTP</td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>Quang Dang</td>
-                    <td>12</td>
-                    <td>28 NTP</td>
-                </tr>
+                <?php foreach($customers as $key=>$cus): ?>
+                        <tr>
+                            <td><?php echo $key ?></td>
+                            <td><?= $cus["name"] ?></td>
+                            <td><?= $cus["age"] ?></td>
+                            <td><?= $cus["address"] ?></td>
+                        </tr>
+                <?php endforeach; ?>
+                
             </table>
         </div>
         <div class="footer">
