@@ -1,3 +1,7 @@
+<?php
+declare(strict_types=1);
+
+?>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -7,7 +11,7 @@
 </head>
 <body>
     <div class="menu">
-        <?php include 'menu.php'; ?>
+        <?php include_once 'menu.php'; ?>
     </div>
     <h1>Welcome to my home page!</h1>
     <?php
@@ -15,12 +19,16 @@
         echo "I have a $color $car.";
     ?>
     <?php
-        require 'noneExistFile.php';
+        include 'noneExistFile.php';
         echo "No error. Executed.";
     ?>
     <p>Some more text.</p>
     <?php
+    include_once 'menu.php';
     include 'footer.php';
+    
     ?>
+
+
 </body>
 </html>
