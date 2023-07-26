@@ -63,3 +63,40 @@ $_REQUEST["from"] ?? null;
             </td>
         </tr>
 <?php endforeach; ?>
+
+
+dirname(__FILE__) : lấy tên thư mục hiện tại
+
+### ABSTRACT INTERFACE
+1 class có thể implements 2 interface có phương thức cùng tên cùng tham số
+
+
+1 class có thể extends lớp cha với tham số tùy chọn
+abstract class AbstractClass
+{
+    // Our abstract method only needs to define the required arguments
+    abstract protected function prefixName($name);
+
+}
+
+class ConcreteClass extends AbstractClass
+{
+    // Our child class may define optional arguments not in the parent's signature
+    public function prefixName($name, $separator = "."): string
+    {
+        if ($name == "Pacman") {
+            $prefix = "Mr";
+        } elseif ($name == "Pacwoman") {
+            $prefix = "Mrs";
+        } else {
+            $prefix = "";
+        }
+        return "{$prefix}{$separator} {$name}";
+    }
+}
+
+$class = new ConcreteClass;
+echo $class->prefixName("Pacman"), "\n";
+echo $class->prefixName("Pacwoman"), "\n";
+
+?>
