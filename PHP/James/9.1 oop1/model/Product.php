@@ -1,5 +1,8 @@
 <?php
-class Product {
+namespace Models;
+use JsonSerializable;
+
+class Product implements JsonSerializable{
     private int $id;
     private string $name;
     private string $description;
@@ -10,12 +13,21 @@ class Product {
         $this->description = $description;
         $this->price = $price;
     }
+    
+    public function jsonSerialize() {
+        return  [
+            'id' => $this->id,
+            'name' => $this->name,
+            'description' => $this->description,
+            'price' => $this->price,
+        ];
+    }
+
+
     public function __toString()
     {
         return "Name: " . $this->getName() . " price: " . $this->getPrice() . "<br>";
     }
-
-
     public function getId(){
         return $this->id;
     }

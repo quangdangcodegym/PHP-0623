@@ -1,4 +1,7 @@
 <?php
+namespace com\cg\shape;
+
+
 class Shape
 {
     public string $name;
@@ -12,13 +15,7 @@ class Shape
     {
         return "I am a shape. My name is $this->name";
     }
-    public function __toString()
-    {
-        return "I am a shape. My name is $this->name";
-    }
 }
 
-$s1 = new Shape("HINH VUONG");
-echo $s1;
 
 ?>

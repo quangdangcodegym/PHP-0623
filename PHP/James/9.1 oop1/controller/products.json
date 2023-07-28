@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "name": "Iphone 333",
+        "description": "Iphone giá re",
+        "price": 1000
+    },
+    {
+        "id": 2,
+        "name": "Iphone 12",
+        "description": "Iphone giá re",
+        "price": 1000
+    },
+    {
+        "id": 3,
+        "name": "Iphone 555",
+        "description": "Iphone giá re",
+        "price": 1000
+    },
+    {
+        "id": 4,
+        "name": "Iphone 14",
+        "description": "Iphone giá re",
+        "price": 1000
+    },
+    {
+        "id": 5,
+        "name": "Uriah Long",
+        "description": "Georgia Solis",
+        "price": 631
+    }
+]
