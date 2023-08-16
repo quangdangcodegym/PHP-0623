@@ -28,6 +28,8 @@ class Controller{
             case 'create':
                 // show create form;
                 break;
+            case 'edit':
+                $this->showProductEditForm();
             default:
                 // show list
                 $this->showProducts();
@@ -35,8 +37,10 @@ class Controller{
     }
     function showProducts(){
         $products = $this->productService->getProducts();
-
-        include './views/products.php';
+        include './views/list-products.php';
+    }
+    function showProductEditForm(){
+        include './views/edit-product.php';
     }
 }
 

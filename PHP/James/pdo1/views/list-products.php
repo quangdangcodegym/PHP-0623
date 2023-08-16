@@ -17,7 +17,9 @@
         <?php foreach($products as $key=>$p): ?>
             <tr>
                 <td><?= $p['id'] ?></td>
-                <td><?= $p['name'] ?></td>
+                <td>
+                    <a href="<?= $_SERVER['PHP_SELF'] . '?action=edit&id=' . $p['id'] ?>"><?= $p['name'] ?></a>
+                </td>
                 <td><?= $p['description'] ?></td>
                 <td><?= $p['price'] ?></td>
             </tr>
