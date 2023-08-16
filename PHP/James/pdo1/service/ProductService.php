@@ -1,7 +1,11 @@
 <?php
-namespace Service;
+namespace MyApp\Service;
+
+include './models/Product.php';
+
 use \PDO;
 use \PDOException;
+use MyApp\Models\Product;
 
 class ProductService{
     private $conn;
@@ -24,6 +28,25 @@ class ProductService{
             echo "Lỗi đọc sản phẩm: " . $e->getMessage();
             return [];
         }
+    }
+
+    public function saveProduct($product){
+        try{
+            $sql = "INSERT INTO products(`name`, `description`, `price`) VALUES (:pName, :pDescription, :pPrice)";
+
+            $stmt = $this->conn->prepare($sql);
+            $description = $product->getDescription();
+            $price = $product->getPrice();
+
+            $stmt->bindValue(':pName', $product->getName());
+            $stmt->bindParam(':pDescription', $description);
+            $stmt->bindParam(':pPrice', $price);
+    
+            $stmt->execute();
+        }catch (PDOException $e){
+            echo $e->getMessage();
+        }
+        
     }
 
 }

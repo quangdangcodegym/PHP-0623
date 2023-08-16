@@ -6,6 +6,7 @@
     <title>Document</title>
 </head>
 <body>
+    <a href="<?= $_SERVER['PHP_SELF'] . '?action=create' ?>">Create</a>
     <table>
         <tr>
             <th>ID</th>
