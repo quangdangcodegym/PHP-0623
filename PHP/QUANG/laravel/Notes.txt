@@ -1,0 +1,10 @@
+Vào trang https://getcomposer.org/download/
+-> tải composer
+-> check composer install composer --version (nhớ reload vscode)
+
+## Tạo dự án
+composer create-project --prefer-dist laravel/laravel hellolaravel
+--> CD tới folde dự án: php artisan serve
+
+## Tạo controller
+php artisan make:controller ProductController
