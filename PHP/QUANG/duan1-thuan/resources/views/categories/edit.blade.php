@@ -10,7 +10,7 @@
 
 <body>
     <div class="container row justify-content-center ms-auto me-auto mt-5">
-        <form class="col-6" action="{{ route('categories.store') }}" method="POST" enctype="multipart/form-data">
+        <form class="col-6" action="{{ route('categories.update', ['id' => $category->id]) }}" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="row">
                 <div class="mb-3 col-xs-12 col-md-12 col-sm-12">

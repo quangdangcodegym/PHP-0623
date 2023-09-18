@@ -67,9 +67,37 @@ class categoriesController extends Controller
         $category = categories::find($id);
         return view('categories.edit', compact('category'));
     }
-    public function update(Request $request, categories $categories)
+    public function update(Request $request, $id)
     {
-        //
+        $request->validate([
+            'name' => 'required|min:5',
+            'detail' => 'required|min:10',
+            // 'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048'
+        ], [
+            'name.required' => 'name không được rỗng',
+            'name.min' => 'name phải lơn hơn 5 ký tự',
+            'detail.required' => 'detail không được rỗng',
+            'detail.min' => 'detail phải lơn hơn 10 ký tự',
+        ]);
+
+        $input = $request->all();
+        $c = categories::find($id);             // product cũ
+
+        if ($image = $request->file('image')) {
+            $path = 'image/';
+            $profileImage = date('YdmHis') . "." . $image->getClientOriginalExtension();
+
+            $oldImagePath = 'image/' . $c->image;
+            if (file_exists($oldImagePath)) {
+                unlink($oldImagePath);
+            }
+            $image->move($path, $profileImage);
+            $input['image'] = $profileImage;
+        } else {
+            $input['image'] = $c->image;
+        }
+        $c->update($input);
+        return redirect()->route('categories.index')->with('msg', 'Categories edited successfully');
     }
     public function destroy(categories $categories)
     {
