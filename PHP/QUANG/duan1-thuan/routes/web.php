@@ -24,7 +24,11 @@ Route::prefix('categories')->name('categories.')->group(function () {
     Route::get('/create', [categoriesController::class, 'create'])->name('create');
 
     Route::post('/store', [categoriesController::class, 'store'])->name('store');
+    Route::get('/edit/{id}', [categoriesController::class, 'edit'])->name('edit');
+
+
     // Route::get('/edit/{id}', [UserController::class, 'getEdit'])->name('edit');
     // Route::post('/edit/{id}', [UserController::class, 'postEdit'])->name('post-edit');
     // Route::get('/delete/{id}', [UserController::class, 'deleteData'])->name('delete');
+    //Route::get('/edit/{id}', [ProductController::class, 'edit'])->name('edit');
 });

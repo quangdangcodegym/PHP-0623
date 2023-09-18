@@ -62,9 +62,10 @@ class categoriesController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(categories $categories)
+    public function edit($id)
     {
-        //
+        $category = categories::find($id);
+        return view('categories.edit', compact('category'));
     }
 
     /**
