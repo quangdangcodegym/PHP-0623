@@ -67,18 +67,10 @@ class categoriesController extends Controller
         $category = categories::find($id);
         return view('categories.edit', compact('category'));
     }
-
-    /**
-     * Update the specified resource in storage.
-     */
     public function update(Request $request, categories $categories)
     {
         //
     }
-
-    /**
-     * Remove the specified resource from storage.
-     */
     public function destroy(categories $categories)
     {
         //

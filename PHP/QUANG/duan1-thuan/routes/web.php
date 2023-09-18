@@ -22,10 +22,11 @@ Route::prefix('categories')->name('categories.')->group(function () {
     Route::get('/', [categoriesController::class, 'index'])->name('index');
 
     Route::get('/create', [categoriesController::class, 'create'])->name('create');
-
     Route::post('/store', [categoriesController::class, 'store'])->name('store');
-    Route::get('/edit/{id}', [categoriesController::class, 'edit'])->name('edit');
 
+
+    Route::get('/edit/{id}', [categoriesController::class, 'edit'])->name('edit');
+    Route::post('/edit/{id}', [categoriesController::class, 'update'])->name('update');
 
     // Route::get('/edit/{id}', [UserController::class, 'getEdit'])->name('edit');
     // Route::post('/edit/{id}', [UserController::class, 'postEdit'])->name('post-edit');

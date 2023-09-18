@@ -28,7 +28,7 @@
                 <td>
                     <form action="#" method="POST">
                         <a href="#" class="btn btn-info">Show</a>
-                        <a href="#" class="btn btn-primary">Edit</a>
+                        <a href="{{ route('categories.update', ['id' => $item->id])}}" class="btn btn-primary">Edit</a>
                         @csrf
                         @method('DELETE')
                         <button type="submit" class="btn btn-danger">Delete</button>
@@ -43,6 +43,7 @@
             @endif
         </tbody>
     </table>
+
 </div>
 @endsection
 <!-- <!DOCTYPE html>

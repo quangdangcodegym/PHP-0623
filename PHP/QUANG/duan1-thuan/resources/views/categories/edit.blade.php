@@ -29,12 +29,12 @@
                 </div>
                 <div class="mb-3 mb-3 col-xs-12 col-md-12 col-sm-12">
                     <label for="image" class="form-label">Image</label>
-                    <input class="form-control" type="file" id="image" name="image" placeholder="image...">
+                    <input onchange="loadFile(event)" class="form-control" type="file" id="image" name="image" placeholder="image...">
                     @error('image')
                     <span style="color: red">{{ $message }}</span>
                     @enderror
 
-                    <img src="/image/{{ $category->image }}" alt="" width="200px" height="200px">
+                    <img id='imgUpdate' src="/image/{{ $category->image }}" alt="" width="200px" height="200px">
                 </div>
                 <div class="col-xs-12 col-md-12 col-sm-12 text-center mt-5">
                     <a href="{{ url('/products') }}" class="btn btn-secondary">Back</a>
@@ -43,7 +43,16 @@
             </div>
         </form>
     </div>
-
+    <script>
+        var loadFile = function(event) {
+            var reader = new FileReader();
+            reader.onload = function() {
+                var output = document.getElementById('imgUpdate');
+                output.src = reader.result;
+            };
+            reader.readAsDataURL(event.target.files[0]);
+        };
+    </script>
 </body>
 
 </html>
