@@ -28,6 +28,8 @@ Route::prefix('categories')->name('categories.')->group(function () {
     Route::get('/edit/{id}', [categoriesController::class, 'edit'])->name('edit');
     Route::post('/edit/{id}', [categoriesController::class, 'update'])->name('update');
 
+    Route::get('/delete/{id}', [categoriesController::class, 'delete'])->name('delete');
+
     // Route::get('/edit/{id}', [UserController::class, 'getEdit'])->name('edit');
     // Route::post('/edit/{id}', [UserController::class, 'postEdit'])->name('post-edit');
     // Route::get('/delete/{id}', [UserController::class, 'deleteData'])->name('delete');

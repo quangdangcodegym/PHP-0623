@@ -98,8 +98,14 @@ class categoriesController extends Controller
         $c->update($input);
         return redirect()->route('categories.index')->with('msg', 'Categories edited successfully');
     }
-    public function destroy(categories $categories)
+    public function delete($id)
     {
-        //
+        $category = categories::find($id);
+        if (empty($category)) {
+            return redirect()->route('categories.index')->with('msgError', 'Category not found');
+        } else {
+            $category->delete();
+            return redirect()->route('categories.index')->with('msg', 'Deleted category successfully');
+        }
     }
 }

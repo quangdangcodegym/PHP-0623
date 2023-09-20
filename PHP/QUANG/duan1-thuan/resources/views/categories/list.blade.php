@@ -19,6 +19,19 @@
         })
     </script>
     @endif
+
+    @if(session('msgError'))
+    <script>
+        var valueMsg = '{{ session("msgError")}}';
+        Swal.fire({
+            position: 'top-end',
+            icon: 'error',
+            title: valueMsg,
+            showConfirmButton: false,
+            timer: 1500
+        })
+    </script>
+    @endif
     <table class="table table-success table-striped table-bordered">
         <thead>
             <tr>
@@ -38,13 +51,9 @@
                 <td>{{ $item->name }}</td>
                 <td>{{ $item->detail }}</td>
                 <td>
-                    <form action="#" method="POST">
-                        <a href="#" class="btn btn-info">Show</a>
-                        <a href="{{ route('categories.update', ['id' => $item->id])}}" class="btn btn-primary">Edit</a>
-                        @csrf
-                        @method('DELETE')
-                        <button type="submit" class="btn btn-danger">Delete</button>
-                    </form>
+                    <a href="#" class="btn btn-info">Show</a>
+                    <a href="{{ route('categories.update', ['id' => $item->id])}}" class="btn btn-primary">Edit</a>
+                    <button onclick="handleBtnDelClick('{{$item->id}}', '{{ $item->name}}')" class="btn btn-danger">Delete</button>
                 </td>
             </tr>
             @endforeach
@@ -58,6 +67,23 @@
 
 </div>
 @endsection
+<script>
+    function handleBtnDelClick(id, name) {
+        Swal.fire({
+            title: 'Are you sure?',
+            text: name,
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, delete it!'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                window.location.assign('/categories/delete/' + id);
+            }
+        })
+    }
+</script>
 <!-- <!DOCTYPE html>
 <html lang="en">
 <head>

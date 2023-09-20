@@ -6,14 +6,14 @@
         <div class="row">
             <div class="mb-3 col-xs-12 col-md-12 col-sm-12">
                 <label for="name" class="form-label">Name</label>
-                <input type="text" class="form-control" id="name" name="name" placeholder="name...">
+                <input value="{{ old('name')}}" type="text" class="form-control" id="name" name="name" placeholder="name...">
                 @error('name')
                 <span style="color: red">{{ $message }}</span>
                 @enderror
             </div>
             <div class="mb-3 mb-3 col-xs-12 col-md-12 col-sm-12">
                 <label for="detail" class="form-label">Detail</label>
-                <textarea type="text" class="form-control" id="detail" name="detail" placeholder="detail..." style="height: 120px"></textarea>
+                <textarea type="text" class="form-control" id="detail" name="detail" placeholder="detail..." style="height: 120px">{{ old('detail')}}</textarea>
                 @error('detail')
                 <span style="color: red">{{ $message }}</span>
                 @enderror
