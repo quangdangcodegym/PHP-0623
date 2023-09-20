@@ -82,7 +82,6 @@ class categoriesController extends Controller
 
         $input = $request->all();
         $c = categories::find($id);             // product cũ
-
         if ($image = $request->file('image')) {
             $path = 'image/';
             $profileImage = date('YdmHis') . "." . $image->getClientOriginalExtension();

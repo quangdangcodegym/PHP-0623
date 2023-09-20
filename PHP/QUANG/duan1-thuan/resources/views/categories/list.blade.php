@@ -1,4 +1,4 @@
-@extends('categories.index')
+@extends('categories.layout')
 @section('content')
 <div class="mt-5">
     <a type="button" class="btn btn-primary mt-2 mb-5" href="{{ route('categories.create') }}">Create product</a>
