@@ -7,6 +7,18 @@
     </h2>
 </div>
 <div class="row">
+    @if(session('msg'))
+    <script>
+        var valueMsg = '{{ session("msg")}}';
+        Swal.fire({
+            position: 'top-end',
+            icon: 'success',
+            title: valueMsg,
+            showConfirmButton: false,
+            timer: 1500
+        })
+    </script>
+    @endif
     <table class="table table-success table-striped table-bordered">
         <thead>
             <tr>
