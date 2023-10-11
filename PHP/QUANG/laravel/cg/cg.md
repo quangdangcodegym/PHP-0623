@@ -26,6 +26,7 @@ php artisan make:migration suatableNsx --table=nhasansuat
 
 --- Thêm khóa ngoại cho bảng products
 php artisan make:migration EditTableProductAddForeign --table=products
+php artisan make:migration EditTableProductAddPriceColumn --table=products
 
 ```php
     public function up(): void
